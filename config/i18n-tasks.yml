@@ -4,7 +4,7 @@ base_locale: en
 locales: [en]
 
 ignore_unused:
-  - "decidim.components.initiative_state.name"
+  - "decidim.components.initiative_status.name"
 
 ignore_missing:
   - decidim.participatory_processes.scopes.global

@@ -2,5 +2,5 @@
 fr:
   decidim:
     components:
-      initiative_state:
-        name: InitiativeState
+      initiative_status:
+        name: InitiativeStatus
