@@ -10,17 +10,17 @@ require_relative "#{base_path}lib/decidim/initiative_state/version"
 DECIDIM_VERSION = Decidim::InitiativeState.decidim_compatibility_version
 
 gem "decidim", DECIDIM_VERSION
-gem "decidim-initiative_state", path: "."
 gem "decidim-initiatives", DECIDIM_VERSION
+gem "decidim-initiative_state", path: "."
 
 gem "bootsnap", "~> 1.4"
 gem "deface"
 gem "puma", ">= 4.3"
 
 group :development, :test do
-gem "byebug", "~> 11.0", platform: :mri
+  gem "byebug", "~> 11.0", platform: :mri
 
-gem "decidim-dev", DECIDIM_VERSION
+  gem "decidim-dev", DECIDIM_VERSION
 end
 
 group :development do
