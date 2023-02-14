@@ -1,0 +1,6 @@
+---
+en:
+  decidim:
+    components:
+      initiative_state:
+        name: InitiativeState
