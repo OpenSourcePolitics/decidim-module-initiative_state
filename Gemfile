@@ -5,13 +5,13 @@ source "https://rubygems.org"
 ruby RUBY_VERSION
 
 base_path = "../" if File.basename(__dir__) == "development_app"
-require_relative "#{base_path}lib/decidim/initiative_state/version"
+require_relative "#{base_path}lib/decidim/initiative_status/version"
 
-DECIDIM_VERSION = Decidim::InitiativeState.decidim_compatibility_version
+DECIDIM_VERSION = Decidim::InitiativeStatus.decidim_compatibility_version
 
 gem "decidim", DECIDIM_VERSION
 gem "decidim-initiatives", DECIDIM_VERSION
-gem "decidim-initiative_state", path: "."
+gem "decidim-initiative_status", path: "."
 
 gem "bootsnap", "~> 1.4"
 gem "deface"

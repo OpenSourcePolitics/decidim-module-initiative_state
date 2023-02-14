@@ -1,3 +1,3 @@
 # frozen_string_literal: true
 
-require "decidim/initiative_state/test/factories"
+require "decidim/initiative_status/test/factories"

@@ -1,22 +1,22 @@
 # frozen_string_literal: true
 
 module Decidim
-  module InitiativeState
-    # This is the engine that runs on the public interface of `InitiativeState`.
+  module InitiativeStatus
+    # This is the engine that runs on the public interface of `InitiativeStatus`.
     class AdminEngine < ::Rails::Engine
-      isolate_namespace Decidim::InitiativeState::Admin
+      isolate_namespace Decidim::InitiativeStatus::Admin
 
       paths["db/migrate"] = nil
       paths["lib/tasks"] = nil
 
       routes do
         # Add admin engine routes here
-        # resources :initiative_state do
+        # resources :initiative_status do
         #   collection do
         #     resources :exports, only: [:create]
         #   end
         # end
-        # root to: "initiative_state#index"
+        # root to: "initiative_status#index"
       end
 
       def load_seed

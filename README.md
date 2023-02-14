@@ -1,18 +1,13 @@
-# Decidim::InitiativeState
+# Decidim::InitiativeStatus
 
-This module enables initiatives to have a state.
-
-## Usage
-
-InitiativeState will be available as a Component for a Participatory
-Space.
+This module enables initiatives to have a status.
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem "decidim-initiative_state"
+gem "decidim-initiative_status"
 ```
 
 And then execute:
