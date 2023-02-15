@@ -1,6 +1,39 @@
 ---
 en:
+  activemodel:
+    attributes:
+      initiative:
+        status_id: CESE status
+      status:
+        name: Name
+        organization: Organization
   decidim:
+    admin:
+      menu:
+        statuses: Statuses
+      models:
+        status:
+          fields:
+            name: Name
+      statuses:
+        create:
+          error: There was a problem creating a new status.
+          success: Status created successfully.
+        destroy:
+          has_spaces: This status has dependent initiatives. Please make sure no Initiative references this status before deleting it.
+          success: Status successfully destroyed
+        edit:
+          title: Edit status
+          update: Update
+        new:
+          create: Create status
+          title: New status
+        no_statuses: No statuses
+        update:
+          error: There was a problem updating this status.
+          success: Status updated successfully
+      titles:
+        statuses: Statuses
     components:
       initiative_status:
         name: InitiativeStatus
