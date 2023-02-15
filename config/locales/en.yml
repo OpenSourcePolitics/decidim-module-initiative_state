@@ -34,6 +34,18 @@ en:
           success: Status updated successfully
       titles:
         statuses: Statuses
+    admin_log:
+      status:
+        create: "%{user_name} created the %{resource_name} status"
+        delete: "%{user_name} deleted the %{resource_name} status"
+        update: "%{user_name} updated the %{resource_name} status"
     components:
       initiative_status:
         name: InitiativeStatus
+    initiatives:
+      application_helper:
+        filter_status_values:
+          all: All
+      initiatives:
+        filters:
+          status: Status

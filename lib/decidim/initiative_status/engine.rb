@@ -25,6 +25,11 @@ module Decidim
         end
       end
 
+      initializer "InitiativeStatus.add_cells_view_paths" do
+        Cell::ViewModel.view_paths.unshift(File.expand_path("#{Decidim::InitiativeStatus::Engine.root}/app/cells"))
+        Cell::ViewModel.view_paths.unshift(File.expand_path("#{Decidim::InitiativeStatus::Engine.root}/app/views")) # for partials
+      end
+
       initializer "InitiativeStatus.admin_settings_menu" do
         Decidim.menu :admin_settings_menu do |menu|
           menu.add_item :statuses,

@@ -3,7 +3,7 @@ fr:
   activemodel:
     attributes:
       initiative:
-        status: Statut du CESE
+        status_id: Statut du CESE
       status:
         name: Nom
         organization: Organization
@@ -34,6 +34,18 @@ fr:
           success: Status mis à jour avec succès
       titles:
         statuses: Statuts
+    admin_log:
+      status:
+        create: "%{user_name} a créé la stetut %{resource_name}"
+        delete: "%{user_name} a supprimé le statut %{resource_name}"
+        update: "%{user_name} a modifié le statut %{resource_name}"
     components:
       initiative_status:
         name: InitiativeStatus
+    initiatives:
+      application_helper:
+        filter_status_values:
+          all: Tous
+      initiatives:
+        filters:
+          status: Statut
