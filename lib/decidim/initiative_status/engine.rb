@@ -30,6 +30,38 @@ module Decidim
         Cell::ViewModel.view_paths.unshift(File.expand_path("#{Decidim::InitiativeStatus::Engine.root}/app/views")) # for partials
       end
 
+      initializer "initiative_status.overrides" do
+        config.to_prepare do
+          Decidim::Initiatives::Admin::UpdateInitiative.class_eval do
+            prepend(UpdateInitiativeExtends)
+          end
+
+          Decidim::Initiatives::InitiativesController.class_eval do
+            prepend(InitiativesControllerExtends)
+          end
+
+          Decidim::Initiatives::Admin::InitiativeForm.class_eval do
+            include(InitiativeFormExtends)
+          end
+
+          Decidim::Initiatives::ApplicationHelper.class_eval do
+            prepend(ApplicationHelperExtends)
+          end
+
+          Decidim::Initiative.class_eval do
+            include(InitiativeExtends)
+          end
+
+          Decidim::Organization.class_eval do
+            include(OrganizationExtends)
+          end
+
+          Decidim::Admin::Permissions.class_eval do
+            prepend(PermissionsExtends)
+          end
+        end
+      end
+
       initializer "InitiativeStatus.admin_settings_menu" do
         Decidim.menu :admin_settings_menu do |menu|
           menu.add_item :statuses,

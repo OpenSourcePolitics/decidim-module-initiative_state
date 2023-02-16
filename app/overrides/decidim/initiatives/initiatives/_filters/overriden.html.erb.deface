@@ -1,0 +1,3 @@
+<!-- insert_after '.filters__section' -->
+
+<%= form.check_boxes_tree :with_any_status, filter_statuses_values, legend_title: t(".status") %>
