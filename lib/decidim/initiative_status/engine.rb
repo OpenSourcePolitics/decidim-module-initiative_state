@@ -59,6 +59,10 @@ module Decidim
           Decidim::Admin::Permissions.class_eval do
             prepend(PermissionsExtends)
           end
+
+          Decidim::Initiatives::Admin::InitiativesController.class_eval do
+            include(InitiativesAdminControllerExtends)
+          end
         end
       end
 

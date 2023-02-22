@@ -9,6 +9,10 @@ en:
         organization: Organization
   decidim:
     admin:
+      filters:
+        initiatives:
+          status_id_eq:
+            label: CESE Status
       menu:
         statuses: Statuses
       models:
