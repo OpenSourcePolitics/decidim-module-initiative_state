@@ -1,6 +1,51 @@
 ---
 fr:
+  activemodel:
+    attributes:
+      initiative:
+        status_id: Statut du CESE
+      status:
+        name: Nom
+        organization: Organization
   decidim:
+    admin:
+      menu:
+        statuses: Statuts
+      models:
+        status:
+          fields:
+            name: Nom
+      statuses:
+        create:
+          error: Une erreur s'est produit en créant un nouveau status
+          success: Status créé avec succès
+        destroy:
+          has_spaces: Des pétitions dépendent de ce statut. Veuillez vous assurer qu'aucune pétition ne dépend de ce statut avant de le supprimer.
+          success: Status supprimé avec succès
+        edit:
+          title: Modifier le statut
+          update: Mettre à jour
+        new:
+          create: Créer un statut
+          title: Nouveau statut
+        no_statuses: Aucun statut
+        update:
+          error: Une erreur s'est produit en mettant à jour ce statut
+          success: Status mis à jour avec succès
+      titles:
+        statuses: Statuts
+    admin_log:
+      status:
+        create: "%{user_name} a créé la stetut %{resource_name}"
+        delete: "%{user_name} a supprimé le statut %{resource_name}"
+        update: "%{user_name} a modifié le statut %{resource_name}"
     components:
       initiative_status:
         name: InitiativeStatus
+    initiatives:
+      application_helper:
+        filter_status_values:
+          all: Tous
+      initiatives:
+        filters:
+          status: Statut
