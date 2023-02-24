@@ -74,9 +74,7 @@ module Decidim
       private
 
       def organization_statuses
-          @organization_statuses ||= current_organization.statuses
-      end
-        current_organization.statuses
+        @organization_statuses ||= current_organization.statuses
       end
 
       def status
